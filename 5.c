@@ -38,7 +38,7 @@ t=a[i];
         }
         if(i>=1&&k<d)
         {
-        b=b+(d-k-b);
+        b=(b-k)+(d-k);
         }
         else
         {
