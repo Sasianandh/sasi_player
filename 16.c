@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-        int a[100],i,n,j,d=0;
+        int a[100],i,n,j,d=0,m=0;
         scanf("%d",&n);
         for(i=0;i<n;i++)
         {
@@ -9,9 +9,24 @@ void main()
         }
        for(i=0;i<n;i++)
         {
-            for(j=i+1;j<n;j++)
+            for(j=0;j<n;j++)
         {
-            if(a[i]!=a[j])
-            printf("%d",a[i]);
+            if(a[i]==a[j])
+            {
+            
+            d++;
+            
+            }
         }
+        if(d==1)
+        {
+        printf("sigle entry = %d",a[i]);
+        m++;
+        d=0;
         }
+        else
+        d=0;
+        }
+        if(m==0)
+        printf("no single entry");
+}
