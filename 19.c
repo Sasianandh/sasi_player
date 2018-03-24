@@ -1,0 +1,35 @@
+#include<stdio.h>
+void main()
+{
+        int n,a[100],i,j=0,m=0;
+        scanf("%d",&n);
+        for(i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+            {
+              if(i==2)
+              {
+              a[j]=i;
+              j++;
+              }
+              else
+              {
+                for(j=2;j<i-1;j++)
+                {
+                    if(i%j==0)
+                    m++;
+                }
+                if(m==0)
+                {
+                    a[j]=i;
+                    j++;
+                }
+            }
+        }
+        }
+            for(i=0;i<j;i++)
+            {
+                printf("%d",a[i]);
+            }
+        }
+            }
